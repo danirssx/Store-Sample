@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c5f4245-fe91-410a-bb3e-f70d0a85da57" name="Changes" comment="init()">
+    <list default="true" id="0c5f4245-fe91-410a-bb3e-f70d0a85da57" name="Changes" comment="Display Products">
+      <change afterPath="$PROJECT_DIR$/src/inventory/ListProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UseStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UseStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/product/ProductDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/product/ProductDetail.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -80,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712532329497</updated>
-      <workItem from="1712532330466" duration="7022000" />
+      <workItem from="1712532330466" duration="8752000" />
     </task>
     <task id="LOCAL-00001" summary="init()">
       <option name="closed" value="true" />
@@ -90,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712537106395</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Display Products">
+      <option name="closed" value="true" />
+      <created>1712540303933</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712540303933</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +117,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init()" />
-    <option name="LAST_COMMIT_MESSAGE" value="init()" />
+    <MESSAGE value="Display Products" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display Products" />
   </component>
 </project>

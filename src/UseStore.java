@@ -1,4 +1,5 @@
 
+import inventory.ListProduct;
 import product.Ganancia;
 import product.Impuesto;
 import product.ProductDetail;
@@ -9,15 +10,9 @@ import static java.lang.System.out;
 
 public class UseStore {
     public static void main(String[] args) {
-        ArrayList<ProductDetail> products = new ArrayList<>();
+        ListProduct products = new ListProduct();
         fillProducts(products);
-
-//        Displaying Products
-        displayTemplate();
-        products.forEach(product -> {
-            product.displayProduct();
-            out.println();
-        });
+        products.displayList();
     }
 
     static void displayTemplate() {
@@ -36,10 +31,10 @@ public class UseStore {
         out.println();
     }
 
-    static void fillProducts(ArrayList<ProductDetail> products) {
-        products.add(new ProductDetail("Tomate", 1.55, Ganancia.ALTO));
-        products.add(new ProductDetail("Pollo", 1.34, Ganancia.MEDIO));
-        products.add(new ProductDetail("Pan", 0.71, Impuesto.NECESIDAD));
-        products.add(new ProductDetail("Maiz", 1.21));
+    static void fillProducts(ListProduct products) {
+        products.addProduct(new ProductDetail("Tomate", 1.55, Ganancia.ALTO));
+        products.addProduct(new ProductDetail("Pollo", 1.34, Ganancia.MEDIO));
+        products.addProduct(new ProductDetail("Pan", 0.71, Impuesto.NECESIDAD));
+        products.addProduct(new ProductDetail("Maiz", 1.21));
     }
 }

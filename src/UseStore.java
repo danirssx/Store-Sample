@@ -3,15 +3,37 @@ import product.Ganancia;
 import product.Impuesto;
 import product.ProductDetail;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+
+import static java.lang.System.out;
+
 public class UseStore {
     public static void main(String[] args) {
         ArrayList<ProductDetail> products = new ArrayList<>();
+        fillProducts(products);
 
-        ProductDetail testing = new ProductDetail("Tomate", 0.52, Ganancia.ALTO);
+//        Displaying Products
+        displayTemplate();
+        products.forEach(product -> {
+            product.displayProduct();
+            out.println();
+        });
+    }
 
-        testing.display();
+    static void displayTemplate() {
+        out.print("NAME");
+        out.print("\t");
+        out.print("PRICE");
+        out.print("\t");
+        out.print("GANANCIA");
+        out.print("\t");
+        out.print("UNIT PRICE");
+        out.print("\t");
+        out.print("IMPUESTO");
+        out.print("\t");
+        out.print("FINAL PRICE");
+
+        out.println();
     }
 
     static void fillProducts(ArrayList<ProductDetail> products) {

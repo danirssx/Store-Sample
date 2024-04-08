@@ -58,21 +58,7 @@ public class ProductDetail extends Product {
 
 //    PRINT
 
-    public void display() {
-
-        out.print("NAME");
-        out.print("\t");
-        out.print("PRICE");
-        out.print("\t");
-        out.print("GANANCIA");
-        out.print("\t");
-        out.print("UNIT PRICE");
-        out.print("\t");
-        out.print("IMPUESTO");
-        out.print("\t");
-        out.print("FINAL PRICE");
-
-        out.println();
+    public void displayProduct() {
 
         out.print(getName());
         out.print("\t");

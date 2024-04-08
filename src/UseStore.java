@@ -1,5 +1,6 @@
 
 import inventory.ListProduct;
+import product.Discount;
 import product.Ganancia;
 import product.Impuesto;
 import product.ProductDetail;
@@ -12,8 +13,16 @@ public class UseStore {
     public static void main(String[] args) {
         ListProduct products = new ListProduct();
         fillProducts(products);
-        products.displayList();
+
+        displayTemplate();
+        products.displayList(products.getProducts());
+        products.getByName("pOLLo").setPromo(Discount.PROMO_10);
+
+        out.println();
+
+        products.displayList(products.getProducts());
     }
+
 
     static void displayTemplate() {
         out.print("NAME");
@@ -25,6 +34,8 @@ public class UseStore {
         out.print("UNIT PRICE");
         out.print("\t");
         out.print("IMPUESTO");
+        out.print("\t");
+        out.print("DESCUENTO");
         out.print("\t");
         out.print("FINAL PRICE");
 

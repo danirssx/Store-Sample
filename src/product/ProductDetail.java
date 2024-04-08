@@ -5,9 +5,14 @@ public class ProductDetail extends Product {
     private double unitPrice;
     private Impuesto impuesto;
     private double finalPrice;
+    private Discount discount;
 
     public double getUnitPrice() {
         return unitPrice;
+    }
+
+    public Impuesto getTypeImpuesto() {
+        return impuesto;
     }
 
     public double getImpuesto() {
@@ -18,12 +23,19 @@ public class ProductDetail extends Product {
         return finalPrice;
     }
 
+    public double getDiscountPrice() { return discount.getPromo(); }
+
     private void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
 
     private void setFinalPrice(double finalPrice) {
         this.finalPrice = finalPrice;
+    }
+
+    public void setPromo(Discount discount) {
+        this.discount = discount;
+        this.finalPrice = getFinalPrice() * (1 - (discount.getPromo() / 100));
     }
 
 //    CONSTRUCTORS
@@ -65,7 +77,7 @@ public class ProductDetail extends Product {
         out.print(currency.format(getPrice()));
         out.print("\t");
         out.print("\t");
-        out.print(getGanancia());
+        out.print(getGanancia() + "%");
         out.print("\t");
         out.print("\t");
 
@@ -73,9 +85,14 @@ public class ProductDetail extends Product {
         out.print("\t");
         out.print("\t");
 
-        out.print(getImpuesto());
+        out.print(getImpuesto() + "%");
         out.print("\t");
         out.print("\t");
+
+            out.print(discount != null ? getDiscountPrice() + "%" : "null");
+            out.print("\t");
+            out.print("\t");
+
 
         out.print(currency.format(getFinalPrice()));
 

@@ -1,13 +1,14 @@
 package product;
 
 import static java.lang.System.out;
+
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 public class Product {
     private String name;
     private double price;
     private Ganancia ganancia;
     protected static NumberFormat currency = NumberFormat.getCurrencyInstance();
-
 
     public String getName() {
         return name;
@@ -23,6 +24,10 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public Ganancia getTypeGanancia() {
+        return ganancia;
     }
 
     public double getGanancia() {
